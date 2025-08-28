@@ -1,0 +1,78 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.1);
+}
+
+/* Box Styles */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #f1c40f;
+    margin: 20px auto;
+    opacity: 0;  /* Start hidden */
+    transition: opacity 1s ease;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 1;  /* Become visible */
+}
+
+/* Card Styles */
+.card-container {
+    margin: 20px auto;
+    perspective: 1000px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #e74c3c;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Loader Styles */
+.loader {
+    display: none;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.loader.visible {
+    display: block;
+}
+
+/* Keyframe Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+.bouncing {
+    animation: bounce 2s infinite;
+}
